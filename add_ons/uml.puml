@@ -1,0 +1,37 @@
+@startuml
+
+class RGBBasis {
+    + port
+    + default_color
+    + interface
+    + rgb_matrix
+    + rgb_bytestream
+    + __init__(..)
+    + init_rgb_matrix()
+    + {static} init_rgb_bytestream()
+    + rgb_matrix_to_rgb_bytestream()
+    + open_interface()
+    + close_interface()
+    + write2rgb()
+    + __str__()
+    + __repr__()
+}
+
+  class UART2FPGA {
+    + enable
+    + port
+    + instanz
+    + __init__(..)
+    + open()
+    + write()
+    + close()
+    + __str__()
+    + __repr__()
+}
+
+UART2FPGA .. RGBBasis
+
+@enduml
+
+// https://useblocks.github.io/posts/daniel/diagramme_mit_plantuml/
+// http://plantuml.com/de/class-diagram

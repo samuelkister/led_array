@@ -1,0 +1,15 @@
+#ledArray
+{
+    width: 75%;
+}
+
+.line
+{
+    display: flex;
+    justify-content: center;
+}
+
+.cell
+{
+    padding-top: 100%;
+}
