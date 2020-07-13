@@ -9,6 +9,7 @@
 <body>
 <H1>Led Array Display</H1>
 <div>
+    <div id="out">Text</div>
     <div id="connectionStatus">Waiting connection status from server</div>
     <div id="ledArray">Waiting led array from server</div>
 </div>
@@ -24,6 +25,8 @@ if(typeof(EventSource)!=="undefined") {
 		//write the received data to the page
 		document.getElementById("connectionStatus").innerHTML = event.data;
 	};
+
+    document.getElementById("out").innerHTML = "Hello";
 
 	var eSrcLedArray = new EventSource("/local_cgi/led_array");
 	// detect message receipt
