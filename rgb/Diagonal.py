@@ -23,7 +23,7 @@ for _ in range(16):
     for spalte in range(7, 0, -1):
         matrix[0][spalte] = matrix[0][spalte-1]
 
-    # Und erste Zelle "auslöschen"
+    # Und oben links Zelle "auslöschen"
     matrix[0][0] = [0, 0, 0]
 
     led_array.write2rgb()
