@@ -1,6 +1,11 @@
 #ledArray
 {
     width: 75%;
+    background-color: rgb(120, 100, 120);
+    border-radius: 0.5em;
+    margin: 0.5em;
+    padding: 0.5em;
+
 }
 
 .line
@@ -11,6 +16,12 @@
 
 .led
 {
-    width: 1em;
-    height: 1em;
+    width: 2em;
+    height: 2em;
+
+    border-radius: 0.2em;
+
+    margin: 0.7em;
+
+    transform: rotate(45deg);
 }

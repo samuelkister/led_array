@@ -1,12 +1,16 @@
 # ======================
 # imports
 # ======================
+import datetime
+import email
+import os
 import threading
 import time
+import urllib
 import webbrowser
 from copy import deepcopy
 from http import HTTPStatus
-from http.server import HTTPServer, CGIHTTPRequestHandler, _url_collapse_path, ThreadingHTTPServer
+from http.server import CGIHTTPRequestHandler, _url_collapse_path, ThreadingHTTPServer
 from queue import Queue
 
 
@@ -244,7 +248,7 @@ class LocalCGIHTTPRequestHandler(CGIHTTPRequestHandler):
                     nb = self.wfile.write(bytes("data: " + msg, 'utf-8'))
                     self.wfile.write(b"\n\n")
                     self.log_message(f"{func} // Send data: {nb} bytes")
-                    self.log_message(f"{func} // data= {msg}")
+                    # self.log_message(f"{func} // data= {msg}")
                     self.wfile.flush()
             except Exception:
                 pass
